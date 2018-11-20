@@ -4,7 +4,7 @@ I need help creating all the configuration files for each STIG item.
 ## GOAL: 
 The idea is to take each STIG rule and build configuration files (ini) with the appropriate actions for each rule. 
 There are over 270 items just for Server 2016 stig and each item would have to be created. 
-This will would allow easy maintaince and organization in named by the STIG version id (eg. WN16-00-000040.ini). 
+This will would allow easy maintenance and organization in named by the STIG version id (eg. WN16-00-000040.ini). 
 
 PowerShell will parse the file then translate it into a ScriptBlock
 
@@ -47,7 +47,7 @@ WN16-00-000040.ini:
     LGPO=DWORD:1
 
 ## Breakdown INI file
-Ignore and starting semicolon for the commented section. Parse the Validate section and if ignore is set to false, turn ScriptBlock key values into one Powershell ScriptBlock; the example should run like this within the calling Powershell parser 
+Ignore and starting semicolon for the commented section. Parse the Validate section and if ignore is set to false, turn ScriptBlock key values into one PowerShell ScriptBlock; the example should run like this within the calling PowerShell parser 
 
     $scriptBlock = {
         $ESCfoAdmins = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}' -Name IsInstalled -ErrorAction SilentlyContinue

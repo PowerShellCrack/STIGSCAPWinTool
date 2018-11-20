@@ -6,11 +6,12 @@ Then apply them to a Windows OS using Microsoft's LGPO.exe tool from their Secur
 
 ## HOW TO USE IT:
   **ApplySTIGAndGPOs.ps1**	This is a more dynamic PowerShell script. This will detect roles,
-				and features and even software and install the appropriate GPO backup.
+				            and features and even software and install the appropriate GPO backup.
 				
   **ApplySTIGBySCAPs.ps1**	STILL DEVELOPING: This is the most advanced PowerShell script. This script will be a lot
-				like Linux's OpenSCAP, it will parse the XCCDF file from DISA and build a dataset
-				of all STIG components and one by one it will apply the STIG based on the configuration files.
+				            like Linux's OpenSCAP, it will parse the XCCDF file from DISA and build a dataset
+				            of all STIG components and one by one it will apply the STIG based on the configuration files.
+				            Configuration files still need to be created, check out the [README.md](Configs/README.md)
 				
   **RemoveSTIGAndGPOs.ps1**	This script just removes the group policy folders and clear the security database.
   
