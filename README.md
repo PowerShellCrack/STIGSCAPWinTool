@@ -1,4 +1,4 @@
-#Windows STIG & SCAP Toolkit
+# Windows STIG & SCAP Toolkit
 
 ## WHAT IS IT: 	
 A PowerShell script that will take a GPO backup or SCAP XCCDF file and generate STIGs settings
@@ -37,7 +37,8 @@ Then apply them to a Windows OS using Microsoft's LGPO.exe tool from their Secur
     Logs\		   <-- Output logs for LGPO and advanced logging (Use CMTRACE)
     SCAP\		   <-- SCAP Benchmark files. Follow README.md instructions in folder
     Temp\		   <-- Store generated LGPO config and pol files
-    Tools\		   <-- Tools used in scripts, such as LGPO 
+    Tools\		   <-- Tools used in scripts, such as LGPO
+	DSC\		   <-- NEW. The idea is to add dsc configuration files here and and apply them along with STIGS/SCAP
 
 
 ## SOURCES:		
@@ -50,3 +51,4 @@ Then apply them to a Windows OS using Microsoft's LGPO.exe tool from their Secur
  - https://www.microsoft.com/en-us/download/confirmation.aspx?id=55319
  - https://github.com/search?l=PowerShell&q=STIG&type=Repositories&utf8=%E2%9C%93
  - https://github.com/mwrlabs/gists/blob/master/PowerView-with-RemoteAccessPolicyEnumeration.ps1
+ - https://github.com/Microsoft/PowerStig
