@@ -18,12 +18,13 @@ Then apply them to a Windows OS using Microsoft's LGPO.exe tool from their Secur
 
 ## REQUIREMENTS:		
  - Modules need to be downloaded. Follow [README.md](Modules/README.md) instructions in modules folder
- - STIG Naming conventions is required for STIG Tools. Follow [README.md](GPO/README.md)  instructions in GPO folder
- - CCI required for SCAP Tools. Follow [README.md](CCI/README.md)  instructions in CCI folder
- - SCAP Benchmarks required for SCAP Tools. Follow [README.md](SCAP/README.md)  instructions in SCAP folder
- - LGPO executable required for all tools. Follow [README.md](Tools/README.md)  instructions in Tools folder
+ - STIG Naming conventions is required for STIG Tools. Follow [README.md](GPO/README.md) instructions in GPO folder
+ - CCI required for SCAP Tools. Follow [README.md](CCI/README.md) instructions in CCI folder
+ - SCAP Benchmarks required for SCAP Tools. Follow [README.md](SCAP/README.md) instructions in SCAP folder
+ - LGPO executable required for all tools. Follow [README.md](Tools/README.md) instructions in Tools folder
+ - Configs files for each STIG ID. Follow [README.md](Configs/README.md) instructions in Tools folder
 
-## WHAT IT DOES: 	
+## WHAT IT DOES:
    **ApplySTIGAndGPOs.ps1**: The script will read into the GPO's backup.xml inside each GUID and identify the name of the policy. Using that information it will determine if the name matches identified system information, roles, features and install products and apply them locally using Microsoft's Security Compliance Manager tool LGPO. This ultimately read the GPO settings, and builds a file with all the registry and security settings, then applies those settings within the local gpo. These settings can then be viewed using the systems gpedit.msc. All keys and settings are backed up in the temp folder and logged in log folder.
 
 ## FOLDERS:
@@ -32,9 +33,9 @@ Then apply them to a Windows OS using Microsoft's LGPO.exe tool from their Secur
     Configs\	   <-- Used with ApplySTIGBySCAPs.ps1. Configuration files for each STIG ID. These are ini like files with commands for validation and remediation steps.			
     Extensions\	   <-- Used with ApplySTIGBySCAPs.ps1. PowerShell extension folder provides additional PowerShell functions
     Modules\	   <-- Additional PowerShell modules found in PowerShell Gallery and elsewhere
-    GPO\		   <-- Used with ApplySTIGAndGPOs.ps1. Follow [README.md](GPO/README.md) instructions in folder
+    GPO\		   <-- Used with ApplySTIGAndGPOs.ps1. Follow README.md instructions in folder
     Logs\		   <-- Output logs for LGPO and advanced logging (Use CMTRACE)
-    SCAP\		   <-- SCAP Benchmark files. Follow [README.md](SCAP/README.md) instructions in folder
+    SCAP\		   <-- SCAP Benchmark files. Follow README.md instructions in folder
     Temp\		   <-- Store generated LGPO config and pol files
     Tools\		   <-- Tools used in scripts, such as LGPO 
 
